@@ -1,0 +1,5 @@
+# Editing files #
+.*.sw*
+
+# Binary files #
+*.py[c|o]
