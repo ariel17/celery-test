@@ -3,3 +3,6 @@
 
 # Binary files #
 *.py[c|o]
+
+# PID for currently executing #
+*.pid
