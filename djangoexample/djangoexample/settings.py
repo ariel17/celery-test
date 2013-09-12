@@ -113,11 +113,6 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
-# Celery addon
-BROKER_URL = 'amqp://guest:guest@localhost:5672//'
-import djcelery
-djcelery.setup_loader()
-
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -161,3 +156,10 @@ LOGGING = {
         },
     }
 }
+
+# Celery addon
+BROKER_URL = 'amqp://guest:guest@localhost:5672//'
+CELERY_ACKS_LATE = True  # acking after executing task, not before
+
+import djcelery
+djcelery.setup_loader()
